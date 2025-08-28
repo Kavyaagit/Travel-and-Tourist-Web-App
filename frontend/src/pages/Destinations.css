@@ -1,0 +1,237 @@
+/* Main wrapper */
+.destinations {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif; /* Use system font stack */
+}
+
+/* Title */
+.destinations h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c3e50; /* Darker heading color */
+  font-size: 2.25rem; /* Larger heading size */
+  font-weight: 700; /* Strong font weight */
+  line-height: 1.2; /* Improved line height */
+}
+
+/* Search + Filter bar */
+.search-filter-bar {
+  display: flex;
+  gap: 1.5rem; /* Increased gap */
+  margin-bottom: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.search-filter-bar input,
+.search-filter-bar select {
+  padding: 0.75rem; /* More vertical padding */
+  font-size: 1rem;
+  border: 1px solid #ced4da; /* Use Bootstrap's border color */
+  border-radius: 0.375rem; /* More consistent border radius */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Add transition */
+  box-sizing: border-box; /* Ensure padding doesn't affect dimensions */
+  max-width: 300px; /* Limit the width of the input/select */
+}
+
+.search-filter-bar input:focus,
+.search-filter-bar select:focus {
+  outline: none;
+  border-color: #0078d7; /* Bootstrap's primary color on focus */
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Standard focus shadow */
+}
+
+/* Destination list grid */
+.destination-list {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Increased min width */
+  gap: 2rem;
+}
+
+/* Individual card */
+.destination-card {
+  background-color: #fff; /* Use white for card background */
+  border-radius: 0.5rem; /* More consistent border radius */
+  overflow: hidden;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.07); /* Subtle shadow */
+  transition: transform 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Add transition */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  border: 1px solid #e0e0e0; /* Add a border */
+}
+
+.destination-card:hover {
+  transform: translateY(-0.25rem); /* Slight lift on hover */
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); /* Increased shadow on hover */
+}
+
+.destination-image {
+  width: 100%;
+  height: 250px; /* Increased height */
+  object-fit: cover;
+  border-radius: 0.375rem 0.375rem 0 0; /* Rounded top corners */
+  margin-bottom: 1.5rem; /* Increased margin */
+}
+
+.destination-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem; /* Increased margin */
+  color: #2c3e50; /* Darker heading */
+  font-size: 1.5rem; /* Larger heading */
+  font-weight: 600; /* Stronger font weight */
+  line-height: 1.2;
+}
+
+.destination-card p {
+  font-size: 1rem;
+  color: #495057; /* Slightly darker text */
+  line-height: 1.5; /* Improved line height */
+}
+
+/* Buttons & links */
+.destination-card button,
+.destination-card a {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem; /* More padding */
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 0.375rem; /* More consistent border radius */
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out; /* Add transition */
+  display: inline-block; /* Ensure consistent display */
+  box-sizing: border-box; /* Ensure padding doesn't affect dimensions */
+}
+
+.destination-card button {
+  background-color: #0078d7; /* Bootstrap's primary color */
+  color: white;
+  font-weight: 500; /* Medium font weight */
+  width: 100%; /* Make buttons full width */
+}
+
+.destination-card a {
+  background-color: #28a745; /* Bootstrap's success color */
+  color: white;
+  width: 100%; /* Make links full width */
+  font-weight: 500;
+}
+
+.destination-card button:hover {
+  background-color: #00609f; /* Darker hover */
+}
+
+.destination-card a:hover {
+  background-color: #218838; /* Darker hover */
+}
+
+/* Reviews section */
+.reviews {
+  margin-top: 1.5rem; /* Increased margin */
+  padding: 1rem;
+  border-radius: 0.375rem; /* More consistent radius */
+  background-color: #f8f9fa; /* Lighter background */
+  border: 1px solid #e0e0e0;
+}
+
+.reviews h4 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.review {
+  padding-bottom: 0.75rem; /* Increased padding */
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid #dee2e6; /* Use Bootstrap's border color */
+  font-size: 0.9rem;
+  color: #6c757d; /* Lighter text */
+}
+
+.review:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+/* Review form */
+.review-form {
+  margin-top: 1.5rem; /* Increased margin */
+  padding: 1rem;
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 0.375rem; /* More consistent radius */
+}
+
+.review-form h4 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.review-form input,
+.review-form textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem; /* Increased margin */
+  padding: 0.75rem; /* More padding */
+  font-size: 1rem;
+  border: 1px solid #ced4da; /* Use Bootstrap's border */
+  border-radius: 0.375rem; /* More radius */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out; /* Add transition */
+  box-sizing: border-box;
+  outline: none;
+}
+
+.review-form input:focus,
+.review-form textarea:focus {
+  border-color: #0078d7;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.review-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.review-form button {
+  background-color: #ffc107; /* Bootstrap's warning color */
+  color: #0c1013;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+}
+
+.review-form button:hover {
+  background-color: #e0a800; /* Darker hover */
+}
+
+/* Add new destination section */
+.add-destination-section {
+  margin-top: 4rem; /* Increased margin */
+  padding-top: 2rem;
+  border-top: 1px solid #dee2e6; /* Bootstrap border */
+}
+
+.add-destination-section h2 {
+  color: #2c3e50;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-align: left;
+}

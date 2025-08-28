@@ -1,0 +1,54 @@
+.homepage {
+  /* Overall layout and spacing for the homepage */
+  padding: 0; /* Removed padding which was causing extra space */
+  margin: 0;
+  max-width: 100%; /* Changed to 100% to take full width */
+}
+
+.hero-section {
+  /* Styling for the main welcome section */
+  position: relative; /* Allows for absolute positioning of elements within */
+  text-align: center;
+  border-radius: 0; /* Removed border radius */
+  margin-bottom: 0; /* Removed bottom margin */
+  overflow: hidden; /* Clip the image to the rounded corners */
+  width: 100vw; /* Ensure section is full viewport width */
+  height: auto;
+}
+
+.hero-image {
+  /* Style for the image */
+  width: 100vw; /* Make the image take up the full viewport width */
+  height: auto;
+  max-height: cover; /* Removed max-height restriction */
+  object-fit: cover; /* Maintain aspect ratio and cover the area */
+  border-radius: 0; /* Removed border radius */
+}
+
+.hero-text {
+  /* Style for the text overlay on the image */
+  position: absolute; /* Position the text over the image */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the text */
+  color: white;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  border-radius: 0; /* Removed border radius */
+  width: 100%; /* Make the text container the same width as the image */
+  text-align: center; /* Center the text within the container */
+}
+
+.hero-text h1 {
+  /* Heading style in the hero section */
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for better visibility */
+}
+
+.hero-text p {
+  /* Paragraph style in the hero section */
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  line-height: 1.7; /* Improve readability */
+}

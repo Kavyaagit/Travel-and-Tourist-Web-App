@@ -1,0 +1,78 @@
+.homepage {
+  /* Overall layout and spacing for the homepage */
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack items vertically by default */
+  align-items: center; /* Center items horizontally */
+}
+
+.hero-section {
+  /* Styling for the main welcome section */
+  position: relative;
+  text-align: left;
+  border-radius: 0;
+  margin-bottom: 0;
+  overflow: hidden;
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center; /* Vertically center content */
+  min-height: 60vh; /* Ensure a minimum height for the section */
+}
+
+.hero-image {
+  /* Style for the image */
+  width: 100vw;
+  height: auto;
+  max-height: 80vh; /* Limit image height to 80% of viewport height */
+  object-fit: cover;
+  border-radius: 0;
+  align-self: flex-start;
+}
+
+.hero-text {
+  /* Style for the text overlay on the image */
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: white;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 0;
+  width: 50%;
+  text-align: left;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.hero-text h1 {
+  /* Heading style in the hero section */
+  font-size: 3vw; /* Use viewport width units for responsiveness*/
+  margin-bottom: 1.5vw;
+  text-shadow: 0.1em 0.1em 0.2em rgba(0, 0, 0, 0.3);
+  word-wrap: break-word; /* handle long words */
+}
+
+.hero-text p {
+  /* Paragraph style in the hero section */
+  font-size: 1.8vw;
+  margin-bottom: 2.5vw;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .hero-text h1 {
+    font-size: 5vw; /* Adjust font size for smaller screens */
+  }
+  .hero-text p {
+    font-size: 2.5vw;
+  }
+  .hero-section {
+    min-height: 50vh;
+  }
+}
